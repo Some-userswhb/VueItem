@@ -1,24 +1,28 @@
 <template>
   <div>
-    <h1>第一个vue脚手架项目</h1>
-    <!--组件化标签-->
-    <HelloWrold/>
+    <!--引入头部-->
+    <Header/>
+    <Main/>
+    <Footer/>
   </div>
 </template>
 
+
 <script>
-  import HelloWrold from './components/HelloWorld.vue'
-  export default {
+  import Header from './components/Header.vue';
+  import Footer from './components/Footer.vue';
+  import Main   from './components/Main.vue';
+  export default{
+
     components:{
-      HelloWrold
+      Header,
+      Footer,
+      Main
     }
-
-
   }
 </script>
 
+
 <style>
-  h1{
-    color: blue;
-  }
+
 </style>

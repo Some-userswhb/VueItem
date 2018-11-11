@@ -5,7 +5,7 @@
   </div>-->
   <div class="todo-container">
     <div class="todo-wrap">
-      <TodoHeader/>
+      <TodoHeader :addTodo="addTodo"/>
       <TodoMain :todos="todos"/>
       <TodoFooter/>
 
@@ -28,6 +28,11 @@
           {title:'敲代码',complete:true}, //默认勾选敲代码
         ]
       }
+    },
+    methods:{
+        addTodo(todo){
+          this.todos.unshift(todo)
+        }
     },
     components:{//组件标签 Header指向template下面的TodoHeader
       TodoHeader:Header,

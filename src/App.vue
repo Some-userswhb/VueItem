@@ -6,7 +6,7 @@
   <div class="todo-container">
     <div class="todo-wrap">
       <TodoHeader :addTodo="addTodo"/>
-      <TodoMain :todos="todos"/>
+      <TodoMain :todos="todos" :deleteTodo="deleteTodo"/>
       <TodoFooter/>
 
     </div>
@@ -32,6 +32,9 @@
     methods:{
         addTodo(todo){
           this.todos.unshift(todo)
+        },
+        deleteTodo(index){
+          this.todos.splice(index,1)
         }
     },
     components:{//组件标签 Header指向template下面的TodoHeader

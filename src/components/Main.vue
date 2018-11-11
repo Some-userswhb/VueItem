@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="todo-main">
-      <Item v-for="(todo,index) in todos" :key="index" :todo="todo" :index="index"/>
+      <Item v-for="(todo,index) in todos" :key="index" :todo="todo" :index="index" :deleteTodo="deleteTodo"/>
 
     </ul>
   </div>
@@ -13,7 +13,7 @@
   export default{
     //接收todos 属性名
     //接收到的所有属性都会成为组件对象的属性
-    props:['todos'],
+    props:['todos','deleteTodo'],
     components:{
       Item
     }

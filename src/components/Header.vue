@@ -9,14 +9,14 @@
   export default{
     data(){
      return{
-
+        msg:'Header'
      }
     }
   }
 </script>
 
 
-<style>
+<style scoped>
   .todo-header input {
     width: 560px;
     height: 28px;

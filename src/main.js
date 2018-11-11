@@ -6,6 +6,8 @@
 import Vue from 'vue'
 //引入App模块
 import App from './App.vue'
+//引入css模块
+import './index.css'
 
 //创建vm
 new Vue({

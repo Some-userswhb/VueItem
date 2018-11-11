@@ -1,18 +1,26 @@
 <template>
-  <div class="todo-footer">
-    <label>
-      <slot name="check"></slot>
-    </label>
-    <span>
-      <slot name="size"></slot>
-    </span>
-    <slot name="delete"></slot>
+  <div>
+    <div class="todo-footer">
+      <label>
+        <input type="checkbox"/>
+      </label>
+      <span>
+          <span>已完成0</span> / 全部2
+        </span>
+      <button class="btn btn-danger">清除已完成任务</button>
+    </div>
   </div>
 </template>
 
 
-<script>
-  export default{}
+<script scoped>
+  export default{
+    data(){
+      return{
+        msg:'Footer'
+      }
+    }
+  }
 </script>
 
 

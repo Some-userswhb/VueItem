@@ -1,20 +1,24 @@
 <template>
-  <li :style="{background: bgColor}" @mouseenter="handleEnter(true)" @mouseleave="handleEnter(false)">
+  <li>
     <label>
       <input type="checkbox" v-model="todo.complete"/>
       <span>{{todo.title}}</span>
     </label>
-    <button class="btn btn-danger" v-show="isShow" @click="deleteItem">删除</button>
+    <button class="btn btn-danger" style="display:none">删除</button>
   </li>
 </template>
 
-
 <script>
-  export default{}
+
+  export default{
+    props:{
+      todo: Object
+    }
+  }
 </script>
 
 
-<style>
+<style scoped>
   li {
     list-style: none;
     height: 36px;
@@ -37,6 +41,7 @@
 
   li button {
     float: right;
+    display: none;
     margin-top: 3px;
   }
 
@@ -47,4 +52,5 @@
   li:last-child {
     border-bottom: none;
   }
+
 </style>
